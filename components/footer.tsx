@@ -56,13 +56,13 @@ export function Footer() {
             transition={{ duration: 0.6 }}
             className="col-span-2 md:col-span-4 lg:col-span-2"
           >
-            <Link href="#home" className="inline-block mb-5">
+            <Link href="#home" className=" flex justify-center md:justify-start mb-2">
               <Image
                 src="/images/logo.png"
                 alt="Do It Up Unisex Salon"
                 width={200}
                 height={60}
-                className="h-14 md:h-16 w-auto object-contain"
+                className="h-30 w-auto object-contain"
               />
             </Link>
             <p className="text-white/50 leading-relaxed mb-6 max-w-sm text-sm">

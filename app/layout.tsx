@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     description: 'Experience premium grooming at Do It Up Unisex Salon. Expert haircuts, styling, coloring, and bridal services for men and women.',
     type: 'website',
   },
+  icons:{icon: '/images/logo-2.png'}
+  
 }
 
 export const viewport: Viewport = {
@@ -42,6 +44,7 @@ export default function RootLayout({
   return (
     <html 
       lang="en" 
+
       className={`${inter.variable} ${bebasNeue.variable} bg-background`}
       suppressHydrationWarning
     >
