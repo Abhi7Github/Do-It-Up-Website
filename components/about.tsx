@@ -64,7 +64,7 @@ export function About() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#D4AF37]/[0.02] rounded-full blur-3xl" />
 
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-top">
           {/* Image Side */}
           <motion.div
             ref={imageRef}
@@ -106,7 +106,7 @@ export function About() {
             </motion.div>
 
             {/* Decorative Border */}
-            <div className="absolute -top-4 -left-4 w-full h-full border border-[#D4AF37]/10 rounded-2xl -z-10" />
+            <div className="absolute -top-4 -left-4 w-full h-full border border-[#D4AF37]/20 rounded-2xl -z-10" />
             
             {/* Decorative dots */}
             <div className="absolute -bottom-8 -left-8 w-24 h-24 opacity-20">

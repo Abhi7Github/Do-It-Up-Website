@@ -85,7 +85,7 @@ export function Gallery() {
   }
 
   return (
-    <section id="gallery" className="section-padding relative overflow-hidden">
+    <section id="gallery" className="section relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B0B0B] via-[#080808] to-[#0B0B0B]" />
 

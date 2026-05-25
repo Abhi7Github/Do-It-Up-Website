@@ -200,8 +200,8 @@
 
 /* Section spacing */
 .section-padding {
-  padding-top: clamp(4rem, 8vw, 8rem);
-  padding-bottom: clamp(4rem, 8vw, 8rem);
+  padding-top: clamp(2rem, 4vw, 4rem);
+  padding-bottom: clamp(4rem, 10vw, 10rem);
 }
 
 /* Container */
@@ -216,19 +216,19 @@
 
 /* Responsive typography */
 .heading-xl {
-  font-size: clamp(2.5rem, 8vw, 7rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 0.95;
   letter-spacing: 0.02em;
 }
 
 .heading-lg {
-  font-size: clamp(2rem, 6vw, 5rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   line-height: 1;
   letter-spacing: 0.02em;
 }
 
 .heading-md {
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
   line-height: 1.1;
 }
 

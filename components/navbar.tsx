@@ -90,8 +90,8 @@ export function Navbar() {
                 src="/images/logo.png"
                 alt="Do It Up Unisex Salon"
                 width={250}
-                height={250}
-                className=" w-fit object-contain max-h-[100px]"
+                height={350}
+                className={`w-fit object-contain ${isScrolled ? "h-full" : "h-20 md:h-25"}`}
                 priority
               />
             </motion.div>

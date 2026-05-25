@@ -104,7 +104,7 @@ export function FloatingButton() {
             onClick={() => setIsExpanded(!isExpanded)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#CD7F32] flex items-center justify-center shadow-lg shadow-[#D4AF37]/30 hover:shadow-[#D4AF37]/50 transition-shadow"
+            className="relative w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#CD7F32] flex items-center justify-center shadow-lg shadow-[#D4AF37]/30 hover:shadow-[#D4AF37]/50 transition-shadow"
             aria-label={isExpanded ? "Close menu" : "Open contact options"}
           >
             {/* Pulse effect */}
