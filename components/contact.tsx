@@ -79,7 +79,7 @@ export function Contact() {
             className="relative rounded-2xl overflow-hidden aspect-square lg:aspect-auto lg:h-full min-h-[350px] md:min-h-[400px] group"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976397304903!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1640000000000!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30267.80778969754!2d73.8046595!3d18.507381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfb732af849d%3A0xd4078b48b3fe44f0!2sKothrud%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1779688964562!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0, filter: "grayscale(100%) invert(92%) contrast(85%)" }}
@@ -88,8 +88,8 @@ export function Contact() {
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute inset-0"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-transparent to-transparent pointer-events-none" />
-            <div className="absolute inset-0 border border-[#D4AF37]/10 rounded-2xl pointer-events-none group-hover:border-[#D4AF37]/20 transition-colors" />
+            {/* <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 border border-[#D4AF37]/10 rounded-2xl pointer-events-none group-hover:border-[#D4AF37]/20 transition-colors" /> */}
           </motion.div>
 
           {/* Contact Info */}

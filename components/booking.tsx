@@ -36,8 +36,6 @@ export function Booking() {
 
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
-    phone: "",
     service: "",
     date: "",
     time: "",
@@ -58,11 +56,9 @@ export function Booking() {
     
     // Reset after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false)
+      // setIsSubmitted(false)
       setFormData({
         name: "",
-        email: "",
-        phone: "",
         service: "",
         date: "",
         time: "",
@@ -96,7 +92,7 @@ export function Booking() {
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 pt-10 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 pt-20 gap-12 lg:gap-20 items-center">
           {/* Content Side */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -124,12 +120,12 @@ export function Booking() {
             </p>
 
             {/* Contact Cards */}
-            <div className="space-y-4">
+            <div className="grid  md:grid-cols-2 gap-4">
               <motion.div 
                 whileHover={{ x: 4 }}
                 className="flex items-center gap-4 p-4 glass rounded-xl group hover:border-[#D4AF37]/20 transition-colors"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors">
                   <Phone className="w-5 h-5 text-[#D4AF37]" />
                 </div>
                 <div>
@@ -166,17 +162,17 @@ export function Booking() {
           >
             <form
               onSubmit={handleSubmit}
-              className="glass-strong rounded-2xl p-6 md:p-8 lg:p-10 relative overflow-hidden"
+              className="glass-strong min-h-100 rounded-2xl p-6 md:p-8 lg:p-10 relative overflow-hidden"
             >
               {/* Form glow effect */}
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#D4AF37]/10 rounded-full blur-3xl" />
 
               {/* Success State */}
-              {isSubmitted && (
+              {isSubmitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="absolute inset-0 bg-[#0B0B0B]/95 backdrop-blur-sm flex flex-col items-center justify-center z-10 rounded-2xl"
+                  className="absolute inset-0  bg-[#0B0B0B]/95 backdrop-blur-sm flex flex-col items-center justify-center z-10 rounded-2xl"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
@@ -187,11 +183,11 @@ export function Booking() {
                     <CheckCircle2 className="w-8 h-8 text-[#0B0B0B]" />
                   </motion.div>
                   <h3 className="font-[var(--font-heading)] text-2xl text-white mb-2">Booking Confirmed!</h3>
-                  <p className="text-white/60 text-center">We&apos;ll send you a confirmation email shortly.</p>
+                  <p className="text-white/60 text-center">We&apos;ll send you a confirmation message shortly.</p>
                 </motion.div>
-              )}
-
-              <div className="space-y-5 relative z-10">
+              )
+              : (
+                <div className="space-y-5 relative z-10">
                 {/* Name */}
                 <div className="relative group">
                   <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30 group-focus-within:text-[#D4AF37] transition-colors" />
@@ -205,31 +201,7 @@ export function Booking() {
                   />
                 </div>
 
-                {/* Email & Phone */}
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="relative group">
-                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30 group-focus-within:text-[#D4AF37] transition-colors" />
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-white/30 focus:border-[#D4AF37]/50 focus:bg-white/[0.07] focus:outline-none transition-all"
-                      required
-                    />
-                  </div>
-                  <div className="relative group">
-                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30 group-focus-within:text-[#D4AF37] transition-colors" />
-                    <input
-                      type="tel"
-                      placeholder="Phone"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-white/30 focus:border-[#D4AF37]/50 focus:bg-white/[0.07] focus:outline-none transition-all"
-                      required
-                    />
-                  </div>
-                </div>
+                
 
                 {/* Service */}
                 <div className="relative group">
@@ -309,6 +281,10 @@ export function Booking() {
                   </span>
                 </motion.button>
               </div>
+              )
+            }
+
+              
             </form>
           </motion.div>
         </div>
